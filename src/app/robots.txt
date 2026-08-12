@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://github.com/Blessy27-CSBS/sitemap.xml
