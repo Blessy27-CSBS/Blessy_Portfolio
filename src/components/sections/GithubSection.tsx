@@ -51,9 +51,9 @@ export const GithubSection: React.FC = () => {
 
         {/* Pinned Repositories Grid */}
         <div className="mb-10">
-          <h3 className="font-display text-3xl font-normal text-[#0F172A] mb-6 flex items-center gap-2">
-            <Code2 className="w-5 h-5 text-[#65A30D]" />
-            Pinned Repositories (@{gh.username})
+          <h3 className="font-display text-2xl sm:text-3xl font-normal text-[#0F172A] mb-6 flex flex-wrap items-center gap-2">
+            <Code2 className="w-5 h-5 text-[#65A30D] shrink-0" />
+            <span className="break-words">Pinned Repositories (@{gh.username})</span>
           </h3>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -65,19 +65,19 @@ export const GithubSection: React.FC = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.1 }}
               >
-                <GlassCard className="p-6 bg-[#FFFFFF] border-[#E2E8F0] shadow-elevated-sm hover:border-[#84CC16] h-full flex flex-col justify-between card-lift">
+                <GlassCard className="p-5 sm:p-6 bg-[#FFFFFF] border-[#E2E8F0] shadow-elevated-sm hover:border-[#84CC16] h-full flex flex-col justify-between card-lift">
                   <div>
-                    <div className="flex items-center justify-between mb-3">
+                    <div className="flex flex-wrap items-start justify-between gap-2 mb-3">
                       <a
                         href={repo.url}
                         target="_blank"
                         rel="noreferrer"
-                        className="font-display text-2xl font-normal text-[#0F172A] hover:text-[#65A30D] transition-colors flex items-center gap-2"
+                        className="font-display text-lg sm:text-xl md:text-2xl font-normal text-[#0F172A] hover:text-[#65A30D] transition-colors flex items-start gap-2 min-w-0 flex-1"
                       >
-                        <Github className="w-4 h-4 text-[#65A30D]" />
-                        {repo.name}
+                        <Github className="w-4 h-4 text-[#65A30D] shrink-0 mt-1" />
+                        <span className="break-all [overflow-wrap:anywhere] leading-snug">{repo.name}</span>
                       </a>
-                      <span className="px-2.5 py-0.5 rounded-md bg-[#F0F0EC] text-[#0F172A] font-mono text-[11px] font-semibold border border-[#E2E8F0]">
+                      <span className="px-2.5 py-0.5 rounded-md bg-[#F0F0EC] text-[#0F172A] font-mono text-[11px] font-semibold border border-[#E2E8F0] shrink-0 self-start">
                         {repo.language}
                       </span>
                     </div>
@@ -100,7 +100,7 @@ export const GithubSection: React.FC = () => {
                       href={repo.url}
                       target="_blank"
                       rel="noreferrer"
-                      className="text-[#0F172A] hover:text-[#65A30D] flex items-center gap-1 text-[11px] font-sans font-bold"
+                      className="text-[#0F172A] hover:text-[#65A30D] flex items-center gap-1 text-[11px] font-sans font-bold shrink-0"
                     >
                       <span>Repository</span>
                       <ExternalLink className="w-3 h-3" />

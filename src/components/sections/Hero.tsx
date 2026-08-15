@@ -83,7 +83,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResumeModal }) => {
               <p className="text-base sm:text-lg font-sans font-bold tracking-wide text-[#65A30D] flex items-center gap-2">
                 <span>Hello, I am</span>
               </p>
-              <h1 className="font-display text-5xl sm:text-7xl lg:text-8xl xl:text-[90px] font-normal tracking-tight text-[#0F172A] leading-[1.02]">
+              <h1 className="font-display text-4xl sm:text-7xl lg:text-8xl xl:text-[90px] font-normal tracking-tight text-[#0F172A] leading-[1.02] break-words">
                 <span>
                   <WordReveal text="MARIA BLESSY" animation="blur-slide" delay={0.1} stagger={0.08} />
                 </span>
@@ -95,11 +95,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResumeModal }) => {
             </motion.div>
 
             {/* Typing role */}
-            <motion.div {...fadeUp(0.16)} className="flex items-center gap-2 min-h-[44px]">
-              <span className="text-lg sm:text-2xl font-sans font-bold text-[#0F172A] tracking-wide">
+            <motion.div {...fadeUp(0.16)} className="flex items-center gap-2 min-h-[44px] flex-wrap">
+              <span className="text-base sm:text-2xl font-sans font-bold text-[#0F172A] tracking-wide break-words">
                 {currentText}
               </span>
-              <span className="w-0.5 h-6 sm:h-7 bg-[#84CC16] animate-pulse rounded-full" />
+              <span className="w-0.5 h-6 sm:h-7 bg-[#84CC16] animate-pulse rounded-full shrink-0" />
             </motion.div>
 
             {/* Bio */}

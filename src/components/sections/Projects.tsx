@@ -126,7 +126,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
                       </span>
                     </div>
 
-                    <h3 className="font-display text-2xl font-normal text-[#0F172A] mb-2">
+                    <h3 className="font-display text-xl sm:text-2xl font-normal text-[#0F172A] mb-2 break-words [overflow-wrap:anywhere]">
                       <WordReveal text={project.title} animation="blur-slide" interactiveHover={false} />
                     </h3>
                     <p className="font-sans text-[#475569] text-xs leading-relaxed mb-4 line-clamp-3 font-normal">

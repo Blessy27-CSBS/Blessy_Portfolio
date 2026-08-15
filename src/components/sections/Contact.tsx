@@ -85,7 +85,7 @@ export const Contact: React.FC<ContactProps> = ({ onShowToast }) => {
                 </button>
               </div>
               <div className="text-[10px] text-[#65A30D] font-mono font-bold uppercase tracking-[0.18em] mb-1">Direct Email</div>
-              <a href={`mailto:${PORTFOLIO_DATA.personal.email}`} className="font-sans text-xl sm:text-2xl font-bold lowercase text-[#0F172A] hover:text-[#65A30D] transition-colors tracking-tight">
+              <a href={`mailto:${PORTFOLIO_DATA.personal.email}`} className="font-sans text-lg sm:text-xl md:text-2xl font-bold lowercase text-[#0F172A] hover:text-[#65A30D] transition-colors tracking-tight break-all">
                 {PORTFOLIO_DATA.personal.email}
               </a>
             </GlassCard>

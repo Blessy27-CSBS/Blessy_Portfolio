@@ -87,19 +87,19 @@ export const Skills: React.FC = () => {
             >
               <div className="card-lift rounded-2xl bg-[#FFFFFF] border border-[#E2E8F0] p-6 h-full flex flex-col justify-between group shadow-elevated-sm hover:border-[#84CC16] transition-all">
                 <div>
-                  <div className="flex items-center justify-between mb-3">
-                    <div className="flex items-center gap-3">
+                  <div className="flex items-start justify-between gap-3 mb-3">
+                    <div className="flex items-center gap-3 min-w-0 flex-1">
                       <div className="w-10 h-10 rounded-xl bg-[#F0F0EC] border border-[#E2E8F0] flex items-center justify-center shrink-0 shadow-elevated-sm">
                         {getSkillIcon(skill.icon)}
                       </div>
-                      <h4 className="text-sm font-sans font-bold text-[#0F172A] flex items-center gap-1.5 leading-snug">
-                        {skill.name}
+                      <h4 className="text-xs sm:text-sm font-sans font-bold text-[#0F172A] flex items-center gap-1.5 leading-snug min-w-0 break-words">
+                        <span className="break-words min-w-0">{skill.name}</span>
                         {skill.highlight && (
                           <span className="w-1.5 h-1.5 rounded-full bg-[#84CC16] shrink-0 animate-pulse" title="Core Specialty" />
                         )}
                       </h4>
                     </div>
-                    <span className="text-[11px] font-mono font-bold px-2.5 py-1 rounded-md border border-[#65A30D] bg-[#84CC16] text-[#0F172A] shrink-0">
+                    <span className="text-[11px] font-mono font-bold px-2.5 py-1 rounded-md border border-[#65A30D] bg-[#84CC16] text-[#0F172A] shrink-0 self-start">
                       {skill.level}%
                     </span>
                   </div>
@@ -151,7 +151,7 @@ export const Skills: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex flex-wrap items-center gap-3 shrink-0 relative z-10">
+          <div className="w-full md:w-auto flex flex-wrap items-center justify-start md:justify-end gap-3 shrink-0 relative z-10">
             <a
               href="https://www.codechef.com/users/maria_24ucb126"
               target="_blank"

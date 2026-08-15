@@ -50,13 +50,13 @@ export const Experience: React.FC = () => {
               {/* Experience Glass Card */}
               <GlassCard className="p-6 md:p-8 bg-[#F3EFEA] border-[#73675C]/25 shadow-xs">
                 <div className="flex flex-wrap items-start justify-between gap-4 mb-4 pb-4 border-b border-[#73675C]/20">
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-start gap-3 min-w-0 flex-1">
                     <div className="w-12 h-12 rounded-xl bg-[#E8E2D9] border border-[#73675C]/20 flex items-center justify-center shrink-0">
                       {getIcon(exp.logoIcon)}
                     </div>
-                    <div>
-                      <h3 className="font-serif-title text-xl md:text-2xl font-semibold text-[#1C1815] leading-snug">{exp.role}</h3>
-                      <h4 className="text-sm font-semibold text-[#1C1815]">{exp.company}</h4>
+                    <div className="min-w-0 flex-1">
+                      <h3 className="font-serif-title text-lg sm:text-xl md:text-2xl font-semibold text-[#1C1815] leading-snug break-words">{exp.role}</h3>
+                      <h4 className="text-xs sm:text-sm font-semibold text-[#1C1815] break-words">{exp.company}</h4>
                     </div>
                   </div>
 

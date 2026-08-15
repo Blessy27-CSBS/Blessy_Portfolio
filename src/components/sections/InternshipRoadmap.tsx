@@ -148,11 +148,11 @@ export const InternshipRoadmap: React.FC = () => {
                         <div className="w-11 h-11 rounded-xl bg-[#F0F0EC] border border-[#E2E8F0] flex items-center justify-center text-[#0F172A] shrink-0 shadow-elevated-sm">
                           {step.icon}
                         </div>
-                        <div>
-                          <h3 className="font-display text-2xl font-normal text-[#0F172A] leading-snug">
+                        <div className="min-w-0 flex-1">
+                          <h3 className="font-display text-xl sm:text-2xl font-normal text-[#0F172A] leading-snug break-words">
                             <WordReveal text={step.title} animation="blur-slide" interactiveHover={false} />
                           </h3>
-                          <p className="text-xs font-sans font-bold text-[#0F172A] mt-0.5">{step.company}</p>
+                          <p className="text-xs font-sans font-bold text-[#0F172A] mt-0.5 break-words">{step.company}</p>
                           <p className="text-xs text-[#475569] font-sans font-medium">{step.type}</p>
                         </div>
                       </div>
