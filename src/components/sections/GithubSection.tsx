@@ -75,7 +75,7 @@ export const GithubSection: React.FC = () => {
                         className="font-display text-lg sm:text-xl md:text-2xl font-normal text-[#0F172A] hover:text-[#65A30D] transition-colors flex items-start gap-2 min-w-0 flex-1"
                       >
                         <Github className="w-4 h-4 text-[#65A30D] shrink-0 mt-1" />
-                        <span className="break-all [overflow-wrap:anywhere] leading-snug">{repo.name}</span>
+                        <span className="break-words leading-snug">{repo.name.replaceAll('_', '_\u200B').replaceAll('-', '-\u200B')}</span>
                       </a>
                       <span className="px-2.5 py-0.5 rounded-md bg-[#F0F0EC] text-[#0F172A] font-mono text-[11px] font-semibold border border-[#E2E8F0] shrink-0 self-start">
                         {repo.language}
