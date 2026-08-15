@@ -310,7 +310,7 @@ export const PORTFOLIO_DATA = {
       id: "core-cs",
       name: "Core CS & Modern Web",
       skills: [
-        { name: "Data Structures & Algorithms (Java/C++)", level: 88, icon: "Binary", highlight: true },
+        { name: "Data Structures & Algorithms (Java/Python)", level: 88, icon: "Binary", highlight: true },
         { name: "TypeScript & JavaScript", level: 90, icon: "Code" },
         { name: "HTML5, CSS3 & Responsive Web Design", level: 92, icon: "Layout" },
         { name: "Git, GitHub & VS Code", level: 95, icon: "Github" }
