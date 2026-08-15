@@ -74,7 +74,7 @@ export const Skills: React.FC = () => {
         {/* Skills Grid */}
         <motion.div
           layout
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
         >
           {displayedSkills.map((skill, idx) => (
             <motion.div
@@ -85,37 +85,19 @@ export const Skills: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.45, delay: idx * 0.04, ease: [0.22, 1, 0.36, 1] }}
             >
-              <div className="card-lift rounded-2xl bg-[#FFFFFF] border border-[#E2E8F0] p-6 h-full flex flex-col justify-between group shadow-elevated-sm hover:border-[#84CC16] transition-all">
-                <div>
-                  <div className="flex items-start justify-between gap-3 mb-3">
-                    <div className="flex items-center gap-3 min-w-0 flex-1">
-                      <div className="w-10 h-10 rounded-xl bg-[#F0F0EC] border border-[#E2E8F0] flex items-center justify-center shrink-0 shadow-elevated-sm">
-                        {getSkillIcon(skill.icon)}
-                      </div>
-                      <h4 className="text-xs sm:text-sm font-sans font-bold text-[#0F172A] flex items-center gap-1.5 leading-snug min-w-0 break-words">
-                        <span className="break-words min-w-0">{skill.name}</span>
-                        {skill.highlight && (
-                          <span className="w-1.5 h-1.5 rounded-full bg-[#84CC16] shrink-0 animate-pulse" title="Core Specialty" />
-                        )}
-                      </h4>
-                    </div>
-                    <span className="text-[11px] font-mono font-bold px-2.5 py-1 rounded-md border border-[#65A30D] bg-[#84CC16] text-[#0F172A] shrink-0 self-start">
-                      {skill.level}%
-                    </span>
-                  </div>
+              <div className="card-lift rounded-2xl bg-[#FFFFFF] border border-[#E2E8F0] p-5 h-full flex items-center gap-4 group shadow-elevated-sm hover:border-[#84CC16] transition-all">
+                <div className="w-11 h-11 rounded-xl bg-[#F0F0EC] border border-[#E2E8F0] flex items-center justify-center shrink-0 shadow-elevated-sm group-hover:bg-[#84CC16]/10 transition-colors">
+                  {getSkillIcon(skill.icon)}
                 </div>
-
-                {/* Animated Progress Bar */}
-                <div className="mt-4 pt-2">
-                  <div className="progress-track">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${skill.level}%` }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 1.1, ease: 'easeOut', delay: idx * 0.03 }}
-                      className="progress-fill"
-                    />
-                  </div>
+                <div className="min-w-0 flex-1">
+                  <h4 className="text-sm font-sans font-bold text-[#0F172A] leading-snug break-words">
+                    {skill.name}
+                  </h4>
+                  {skill.highlight && (
+                    <span className="inline-block mt-0.5 text-[10px] font-mono font-semibold text-[#65A30D] uppercase tracking-wider">
+                      Core Specialty
+                    </span>
+                  )}
                 </div>
               </div>
             </motion.div>
